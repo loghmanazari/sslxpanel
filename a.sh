@@ -146,11 +146,6 @@ done
         bash ~/.acme.sh/acme.sh --issue -d ${domain} --standalone -k ec-256 --insecure --force
     fi
     
-    if [[ -n $(echo $domainIP | grep nginx) ]]; then
-        yellow "The domain name analysis failed, please check whether the domain name is correctly entered, and whether the domain name has been pointed to the server's public IP address"
-        exit 1
-    fi
-    
 
 
 

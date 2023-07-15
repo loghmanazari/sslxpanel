@@ -149,7 +149,10 @@ done
     if [[ -n $(echo $domainIP | grep nginx) ]]; then
         yellow "The domain name analysis failed, please check whether the domain name is correctly entered, and whether the domain name has been pointed to the server's public IP address"
         exit 1
+    elif [[ -n $(echo $domainIP | grep ":") || -n $(echo $domainIP | grep ".") ]]; then
+    fi
     
+
 
 
 if command -v apt-get >/dev/null; then
